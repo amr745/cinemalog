@@ -8,6 +8,7 @@
   <title>CinemaLog</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body class="grey lighten-2">
   <header class="navbar-fixed">
@@ -17,8 +18,9 @@
           <li><a href="/" class="left brand-logo">&nbsp;&nbsp;CinemaLog</a></li>
         </ul>
         <ul class="right">
-          <li><a href="/about">About</a></li>
-          <li><a href="/movies">View All My Movies</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'movies_create' %}">Add a Movie</a></li>
+          <li><a href="{% url 'index' %}">View All My Movies</a></li>
         </ul>
       </div>
     </nav>
