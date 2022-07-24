@@ -5,13 +5,15 @@
 
 {% for movie in movies %}
   <div class="card">
-    <div class="card-content">
-      <span class="card-title">{{ movie.title }}</span>
-      <p>Release Date: {{ movie.date }}</p>
-      <p>Description: {{ movie.description }}</p>
-        <p>Rating: {{ movie.rating }}</p>
-        <p>Genre: {{ movie.genre }}</p>
-    </div>
+    <a href="{% url 'detail' movie.id %}">
+      <div class="card-content">
+        <span class="card-title">{{ movie.title }}</span>
+        <p>Release Date: {{ movie.date }}</p>
+        <p>Description: {{ movie.description }}</p>
+          <p>Rating: {{ movie.rating }}</p>
+          <p>Genre: {{ movie.genre }}</p>
+      </div>
+    </a>
   </div>
 {% endfor %}
 

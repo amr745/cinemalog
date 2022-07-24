@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Movie Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ movie.title }}</span>
+    <img class="responsive-img card-panel" src="{{ movie.url }}" alt="Movie Poster" value="Movie Poster">
+    <p>Movie Info.: {{ movie.synopsis }}</p>
+    <p>Release Date: {{ movie.date }}</p>
+    <p>Rating: {{ movie.rating }}</p>
+  </div>
+</div>
+
+{% endblock %}
