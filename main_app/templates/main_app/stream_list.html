@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Streaming Service List</h1>
+
+{% for stream in stream_list %}
+  <a href="{% url 'streams_detail' stream.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ stream.name }}</span>
+            <p>Color: {{ stream.color }}</p>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}
