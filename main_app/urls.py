@@ -10,6 +10,7 @@ urlpatterns = [
     path('movies/<int:pk>/update/', views.MovieUpdate.as_view(), name='movies_update'),
     path('movies/<int:pk>/delete/', views.MovieDelete.as_view(), name='movies_delete'),
     path('movies/<int:movie_id>/add_view/', views.add_view, name='add_view'),
+    path('movies/<int:movie_id>/assoc_stream/<int:stream_id>/', views.assoc_stream, name='assoc_stream'),
     path('streams/', views.StreamList.as_view(), name='streams_index'),
     path('streams/<int:pk>/', views.StreamDetail.as_view(), name='streams_detail'),
     path('streams/create/', views.StreamCreate.as_view(), name='streams_create'),

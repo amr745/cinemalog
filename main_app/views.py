@@ -28,9 +28,11 @@ def movies_index(request):
 
 def movie_detail(request, movie_id):
   movie = Movie.objects.get(id=movie_id)
+  streams_movie_doesnt_have = Stream.objects.exclude(id__in = movie.streams.all().values_list('id'))
   view_form = ViewForm()
   return render(request, 'movies/detail.html', {
-    'movie': movie, 'view_form': view_form
+    'movie': movie, 'view_form': view_form,
+    'streams': streams_movie_doesnt_have
   })
 
 def add_view(request, movie_id):
@@ -58,3 +60,7 @@ class StreamUpdate(UpdateView):
 class StreamDelete(DeleteView):
   model = Stream
   success_url = '/stream/'
+
+def assoc_stream(request, movie_id, stream_id):
+  Movie.objects.get(id=movie_id).streams.add(stream_id)
+  return redirect('detail', movie_id=movie_id)

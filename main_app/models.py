@@ -52,6 +52,7 @@ class Movie(models.Model):
         default=GENRES[3][0]
     )
     url = models.CharField(max_length=200)
+    streams = models.ManyToManyField(Stream)
 
     def __str__(self):
         return self.title
