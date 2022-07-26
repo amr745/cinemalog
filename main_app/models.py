@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from datetime import date
+from django.contrib.auth.models import User
 
 RATINGS = (
     ('G', 'G'),
@@ -51,14 +52,18 @@ class Movie(models.Model):
         choices=GENRES,
         default=GENRES[3][0]
     )
-    url = models.CharField(max_length=200)
+    url = models.FileField()
     streams = models.ManyToManyField(Stream)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
         return reverse('detail', kwargs={'movie_id': self.id})
+
+    # def __str__(self):
+    #   return f"Photo for movie_id: {self.movie_id} @{self.url}"
 
 class View(models.Model):
     date = models.DateField('view date')
@@ -75,3 +80,10 @@ class View(models.Model):
 
     class Meta:
         ordering = ['-date']
+
+# class Photo(models.Model):
+#     url = models.CharField(max_length=200)
+#     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+
+#     def __str__(self):
+#         return f"Photo for movie_id: {self.movie_id} @{self.url}"
