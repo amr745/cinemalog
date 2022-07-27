@@ -12,3 +12,22 @@ body {
     padding-top: 0;
     text-align: right;
   }
+
+  .brand-img img {
+    height: 64px;
+    padding: 0px;
+    width: auto; 
+    border-radius: 6px;
+  }
+
+  .movie-imgs {
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px; 
+    column-gap: 10px;
+    row-gap: 15px;
+  }
+
+  .a-words a {
+    color: white;
+
+  }
