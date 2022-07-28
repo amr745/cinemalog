@@ -44,16 +44,6 @@ body {
   .navbar-fixed {
     z-index: 999; 
  }
-  
-  /* #mobile-links { */
-    /* margin-left: 300px; */
-    /* z-index: 1; */
-  /* } */
-  /* @media screen and (max-width: 670px){
-    header{
-      min-height: 500px;
-    }
-  } */
 
   .brand-img img {
     height: 64px;
@@ -66,4 +56,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
+  }
+
+  .about-contianer {
+    margin-top: 25%;
+  }
+
+  .movie-details {
+    color: black;
   }

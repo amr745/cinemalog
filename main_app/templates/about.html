@@ -1,8 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <h1>About CinemaLog</h1>
-    <hr />
-    <p>Hey, cinephiles! Log your favorite films here!</p>
+<h1 class="center">What is CinemaLog?</h1>
+
+<div class="row about-contianer">
+    <div class="col s7 push-s5">
+        <span class="flow-text">
+            <div class="video-container">
+                <iframe width="853" height="480" src="//www.youtube.com/embed/7AFTM5pBOwE" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </span>
+    </div>
+    <div class="col s5 pull-s7">
+        <span class="flow-text"></span>
+            <p class="flow-text">Do you have a “comfort movie” which, like comfort food, you turn to again and again? </p>
+            <p class="flow-text">CinemaLog is here to help you save a list of the movies you love all in one place.</p>
+        </span>
+    </div>
+</div>
 
 {% endblock %}
