@@ -11,14 +11,14 @@ CinemaLog is a full CRUD movie managment application that uses authentication an
 ---
 
 ## Technologies Used
-Python3
-Django
-Materialize
-Postgres
-HTML5
-CSS
-AWS
-Heroku
+* Python3
+* Django
+* Materialize
+* Postgres
+* HTML5
+* CSS
+* AWS
+* Heroku
 
 ---
 
